@@ -53,7 +53,7 @@ app.get('/example', async (req, res) => {
   }
 });
 
-app.get('/surfline/:id', async (req, res) => {
+app.get('/:id', async (req, res) => {
   try {
     const result = await axios.get(`https://api.surfline.com/v1/forecasts/${req.params.id}`);
     res.status(200).json(result.data);
