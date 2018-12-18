@@ -31,7 +31,6 @@ app.get('/', (req, res) => {
 });
 
 app.get('/:spot/:hash', async (req, res) => {
-  console.log('here');
   const url = `https://www.surfline.com/surf-report/${req.params.spot}/${req.params.hash}`;
   try {
     const result = await getSurflineData(url);
