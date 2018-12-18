@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 
 async function getSurflineData(url) {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({ args: ['--no-sanbox'] });
   const page = await browser.newPage();
   await page.goto(url);
 
