@@ -38,6 +38,7 @@ app.get('/:spot/:hash', async (req, res) => {
     console.log(1);
     res.json(result);
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
