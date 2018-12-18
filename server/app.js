@@ -62,7 +62,7 @@ app.get('/surfline/:id', async (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  res.status(404).send('Error not found: Try /, /example, or /spots/:id');
+  res.status(404).send('Error not found');
 });
 
 app.listen(PORT, () => {
