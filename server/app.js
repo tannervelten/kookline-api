@@ -30,7 +30,7 @@ async function getSurflineData(url) {
 }
 
 app.get('/', (req, res) => {
-  res.send(`<h1>Welcome to kookline api!</h1><li><a href="${process.env.URL}el-porto/5842041f4e65fad6a7708906">El Porto</a></li><li><a href="${process.env.URL}county-line/5842041f4e65fad6a7708813">County Line</a></li><li><a href="${process.env.URL}malibu-second-to-third-point/5842041f4e65fad6a7708817">Malibu</a></li>`)
+  res.send(`<h1>Welcome to <a href="http://kookline.surge.sh/" target="_blank">Kookline</a> api!</h1><li><a href="${process.env.URL}el-porto/5842041f4e65fad6a7708906">El Porto</a></li><li><a href="${process.env.URL}county-line/5842041f4e65fad6a7708813">County Line</a></li><li><a href="${process.env.URL}malibu-second-to-third-point/5842041f4e65fad6a7708817">Malibu</a></li>`)
 });
 
 app.get('/:spot/:hash', async (req, res) => {
