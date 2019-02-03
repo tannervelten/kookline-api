@@ -2,12 +2,22 @@ const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
 const puppeteer = require('puppeteer');
+const { CronJob } = require('cron')
 require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors());
+
+new CronJob({
+  cronTime: '*/10 * * * * *',
+  onTick: function() {
+    console.log('boop')
+  },
+  start: true,
+  timeZone: 'America/Los_Angeles'
+})
 
 async function getSurflineData(url) {
   const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
