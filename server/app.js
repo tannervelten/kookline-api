@@ -10,14 +10,14 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 
-new CronJob({
-  cronTime: '*/10 * * * * *',
-  onTick: function() {
-    console.log('boop')
-  },
-  start: true,
-  timeZone: 'America/Los_Angeles'
-})
+// new CronJob({
+//   cronTime: '*/10 * * * * *',
+//   onTick: function() {
+//     console.log('boop')
+//   },
+//   start: true,
+//   timeZone: 'America/Los_Angeles'
+// })
 
 async function getSurflineData(url) {
   const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
