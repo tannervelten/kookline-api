@@ -1,5 +1,4 @@
 function sayHello() {
-  console.log('Hello from node file');
+  console.log('Hello from node file')
 }
-sayHello();
-process.exit();
+sayHello()
